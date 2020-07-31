@@ -1,3 +1,3 @@
 #! /bin/bash
 
-cd .. && sphinx-multiversion docs docs/_build/dirhtml
+cd ../.. && sphinx-multiversion docs docs/_build/dirhtml
