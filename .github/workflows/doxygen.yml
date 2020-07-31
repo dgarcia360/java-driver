@@ -1,4 +1,4 @@
-name: "CI Docs"
+name: "Doxygen"
 
 on:
   push:
@@ -17,9 +17,8 @@ jobs:
         persist-credentials: false
         fetch-depth: 0
     - name: Folder name
-        id: folder_name
-        run: |
-          echo ::set-output name=FOLDER_NAME::docs/_build/dirhtml/${GITHUB_REF#refs/*/}/api
+      id: folder_name
+      run: echo ::set-output name=FOLDER_NAME::docs/_build/dirhtml/${GITHUB_REF#refs/*/}/api
     - name: Set up Doxygen
       run: sudo apt-get install doxygen
     - name: Build Doxygen docs
