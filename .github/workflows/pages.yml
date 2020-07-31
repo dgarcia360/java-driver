@@ -27,7 +27,7 @@ jobs:
         export PATH=$PATH:~/.local/bin
         cd docs
         make multiversion
-    - name: Folder name
+    - name: Configure Doxygen
       id: folder_name
       run: echo ::set-output name=FOLDER_NAME::docs/_build/dirhtml/${GITHUB_REF#refs/*/}/api
     - name: Build Doxygen docs

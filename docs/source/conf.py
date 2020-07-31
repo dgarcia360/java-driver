@@ -233,11 +233,11 @@ rst_epilog = """
 .. |mon_version| replace:: 3.1
 .. |man_version| replace:: 2.0
 .. |mon_root| replace::  :doc:`Scylla Monitoring Stack </operating-scylla/monitoring/index>`
-""" 
+"""
 
 # -- Options for multiversion --------------------------------------------
 # Whitelist pattern for tags (set to None to ignore all tags)
-smv_tag_whitelist = r'^.*$'
+smv_tag_whitelist = None
 # Whitelist pattern for branches (set to None to ignore all branches)
 smv_branch_whitelist = r"^master$"
 # Whitelist pattern for remotes (set to None to use local branches only)
