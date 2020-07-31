@@ -8,3 +8,5 @@ Datastax Java Driver for Apache Cassandra®
    faq/index
    manual/index
    upgrade_guide/index
+   API <../api#http://>
+

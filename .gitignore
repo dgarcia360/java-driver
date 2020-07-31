@@ -5,6 +5,8 @@ testing/
 .classpath
 .project
 docs/_build
+html
+latex
 notes
 .DS_Store
 

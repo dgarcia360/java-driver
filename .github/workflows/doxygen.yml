@@ -16,15 +16,17 @@ jobs:
       with:
         persist-credentials: false
         fetch-depth: 0
-    - name: Set up Python
-      uses: actions/setup-python@v1
-      with:
-        python-version: 3.7
-    - name: Build docs
+    - name: Folder name
+        id: folder_name
+        run: |
+          echo ::set-output name=FOLDER_NAME::docs/_build/dirhtml/${GITHUB_REF#refs/*/}/api
+    - name: Set up Doxygen
+      run: sudo apt-get install doxygen
+    - name: Build Doxygen docs
       run: |
-        export PATH=$PATH:~/.local/bin
-        cd docs
-        make multiversion
+        mkdir -p 
+        echo "HTML_OUTPUT += ${GITHUB_REF#refs/*/}" >> Doxyfile
+        doxygen doxyfile
     - name: Deploy
       run : ./docs/_utils/deploy.sh
       env:
