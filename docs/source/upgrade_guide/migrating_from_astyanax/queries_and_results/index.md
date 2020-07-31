@@ -1,3 +1,7 @@
+```eval_rst
+:orphan:
+```
+
 # Queries and Results
 There are many resources such as [this post][planetCCqlLink] or [this post][dsBlogCqlLink] to learn
 how to transform previous Thrift operations to CQL queries.

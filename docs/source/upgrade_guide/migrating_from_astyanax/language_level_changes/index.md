@@ -1,3 +1,7 @@
+```eval_rst
+:orphan:
+```
+
 # Language change : from Thrift to CQL
 The data model changes when using *CQL* (Cassandra Query Language).
 *CQL* is providing an abstraction of the low-level data stored in *Cassandra*, in

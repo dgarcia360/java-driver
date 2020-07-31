@@ -1,3 +1,7 @@
+```eval_rst
+:orphan:
+```
+
 # Configuration
 
 ## How Configuring the Java driver works

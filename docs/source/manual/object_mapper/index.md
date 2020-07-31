@@ -24,7 +24,7 @@ See the child pages for more information:
 ```eval_rst
 .. toctree::
    :hidden:
-   
+      
    creating/index
    custom_codecs/index
    using/index
