@@ -4,8 +4,7 @@ testing/
 .settings
 .classpath
 .project
-doc
-docs
+docs/_build
 notes
 .DS_Store
 
