@@ -29,11 +29,11 @@ jobs:
         make multiversion
     - name: Configure Doxygen
       id: folder_name
-      run: echo ::set-output name=FOLDER_NAME::docs/_build/dirhtml/${GITHUB_REF#refs/*/}/api
+      run: echo '::set-env name=FOLDER_NAME::docs/_build/dirhtml/${GITHUB_REF#refs/*/}/api'
     - name: Build Doxygen docs
       run: |
         mkdir -p ${FOLDER_NAME}
-        echo "HTML_OUTPUT += ${FOLDER_NAME}" >> Doxyfile
+        echo 'HTML_OUTPUT +=' ${FOLDER_NAME} >> Doxyfile
         doxygen doxyfile
     - name: Deploy
       run : ./docs/_utils/deploy.sh
