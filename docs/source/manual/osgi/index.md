@@ -1,3 +1,7 @@
+```eval_rst
+:orphan:
+```
+
 # OSGi
 
 The driver is available as an [OSGi] bundle. More specifically, 

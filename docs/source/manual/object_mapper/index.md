@@ -26,6 +26,6 @@ See the child pages for more information:
    :hidden:
    
    creating/index
-   using/index
    custom_codecs/index
+   using/index
 ```

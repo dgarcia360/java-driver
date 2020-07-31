@@ -22,7 +22,7 @@ import yaml
 import re
 from docutils import nodes
 from sphinx.util import logging
-from recommonmark.parser import CommonMarkParser
+import recommonmark
 from recommonmark.transform import AutoStructify
 
 logger = logging.getLogger(__name__)
@@ -55,7 +55,7 @@ def create_redirects(app, docname):
 
 # -- General configuration ------------------------------------------------
 
-# Add any Sphinx extension module names here, as strings. They can be
+# Add any Sphinx extension'¡' module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
@@ -63,16 +63,15 @@ extensions = [
     'sphinx.ext.mathjax',
     'sphinx.ext.githubpages',
     'sphinx.ext.extlinks',
+    'sphinx.ext.autosectionlabel',
     'sphinx_scylladb_theme',
-    'sphinx_multiversion'
+    'sphinx_multiversion',
+    'recommonmark'
 ]
 
 # Add Markdown support
 source_suffix = ['.rst', '.md']
-
-source_parsers = {
-    '.md': CommonMarkParser,
-}
+autosectionlabel_prefix_document = True
 
 def setup(app):
     app.add_config_value('recommonmark_config', {
