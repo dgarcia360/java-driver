@@ -29,12 +29,13 @@ jobs:
         make multiversion
     - name: Build Doxygen docs
       run: |
-        echo 'Output dir: ${{ FOLDER_NAME }}'
-        mkdir -p ${{ FOLDER_NAME }}
-        echo 'HTML_OUTPUT = ${{ FOLDER_NAME }}' >> Doxyfile
+        echo 'Output dir: ${{ OUTPUT_DIR }}'
+        mkdir -p ${{ OUTPUT_DIR }}
+        echo 'HTML_OUTPUT = ${{ OUTPUT_DIR }}' >> Doxyfile
         doxygen doxyfile
       env:
-        FOLDER_NAME: 'docs/_build/dirhtml/${{ GITHUB_REF#refs/*/ }}/api'
+        BRANCH_NAME: ${{ GITHUB_REF#refs/*/ }}
+        OUTPUT_DIR: 'docs/_build/dirhtml/${{ BRANCH_NAME }}/api'
     - name: Deploy
       run : ./docs/_utils/deploy.sh
       env:
