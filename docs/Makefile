@@ -28,6 +28,7 @@ clean:
 
 .PHONY: preview
 preview: setup
+	./_utils/doxygen.sh
 	poetry run sphinx-autobuild -b dirhtml $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml --port 5500
 
 .PHONY: dirhtml
