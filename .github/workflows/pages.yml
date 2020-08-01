@@ -34,8 +34,7 @@ jobs:
         echo 'HTML_OUTPUT = ${{ OUTPUT_DIR }}' >> Doxyfile
         doxygen doxyfile
       env:
-        BRANCH_NAME: ${{ GITHUB_REF#refs/*/ }}
-        OUTPUT_DIR: 'docs/_build/dirhtml/${{ BRANCH_NAME }}/api'
+        OUTPUT_DIR: 'docs/_build/dirhtml/${{ GITHUB_REF##*/ }}/api'
     - name: Deploy
       run : ./docs/_utils/deploy.sh
       env:
