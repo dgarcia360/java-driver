@@ -28,7 +28,7 @@ clean:
 
 .PHONY: preview
 preview: setup
-	./_utils/doxygen.sh
+	cd .. && ./docs/_utils/doxygen.sh
 	poetry run sphinx-autobuild -b dirhtml $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml --port 5500
 
 .PHONY: dirhtml
@@ -68,6 +68,5 @@ linkcheck: setup
 .PHONY: multiversion
 multiversion: setup
 	poetry run ./_utils/multiversion.sh
-	cd .. && ./docs/_utils/doxygen.sh
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/dirhtml."
