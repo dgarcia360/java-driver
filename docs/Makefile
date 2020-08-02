@@ -68,5 +68,6 @@ linkcheck: setup
 .PHONY: multiversion
 multiversion: setup
 	poetry run ./_utils/multiversion.sh
+	cd .. && ./docs/_utils/doxygen.sh
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/dirhtml."

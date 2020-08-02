@@ -1,6 +1,5 @@
 #!/bin/bash
 
-cd ..
 OUTPUT_DIR="docs/_build/dirhtml/api"
 if [[ -v "${GITHUB_REF}" ]]; then
     OUTPUT_DIR="docs/_build/dirhtml/${GITHUB_REF##*/}/api"

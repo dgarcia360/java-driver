@@ -28,9 +28,7 @@ jobs:
         cd docs
         make multiversion
     - name: Build Doxygen docs
-      run: |
-        cd docs
-        ./docs/_utils/doxygen.sh
+      run: ./docs/_utils/doxygen.sh
     - name: Deploy
       run : ./docs/_utils/deploy.sh
       env:
