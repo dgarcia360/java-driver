@@ -1,6 +1,6 @@
 #!/bin/bash
 
-GITHUB_VERSION= $(echo $GITHUB_REF | cut -d'/' -f 3)
+GITHUB_VERSION= $($GITHUB_REF | cut -d'/' -f 3)
 
 OUTPUT_DIR="docs/_build/dirhtml/api"
 if [[ -v "$GITHUB_VERSION" ]]; then
