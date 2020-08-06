@@ -29,8 +29,6 @@ jobs:
         make multiversion
     - name: Build Doxygen docs
       run: ./docs/_utils/doxygen.sh
-      env:
-        GITHUB_VERSION: $(echo $GITHUB_REF | cut -d'/' -f 3)
     - name: Deploy
       run : ./docs/_utils/deploy.sh
       env:
