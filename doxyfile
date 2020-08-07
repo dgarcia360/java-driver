@@ -334,13 +334,3 @@ DOT_TRANSPARENT        = NO
 DOT_MULTI_TARGETS      = NO
 GENERATE_LEGEND        = YES
 DOT_CLEANUP            = YES
-
-HTML_OUTPUT = docs/_build/dirhtml//api
-HTML_OUTPUT = docs/_build/dirhtml//api
-HTML_OUTPUT = docs/_build/dirhtml//api
-HTML_OUTPUT = docs/_build/dirhtml//api
-HTML_OUTPUT = docs/_build/dirhtml//api
-HTML_OUTPUT = docs/_build/dirhtml//api
-HTML_OUTPUT = docs/_build/dirhtml//api
-HTML_OUTPUT = docs/_build/dirhtml//api
-HTML_OUTPUT = docs/_build/dirhtml//api

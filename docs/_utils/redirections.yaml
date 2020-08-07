@@ -3,4 +3,4 @@
 #
 
 
-api.html: /api/classes.html
+api: /api/classes.html
