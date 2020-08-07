@@ -65,7 +65,7 @@ more features and better compatibility.
 __Disclaimer__: Some _DataStax/DataStax Enterprise_ products might partially work on 
 big-endian systems, but _DataStax_ does not officially support these systems.
 
-## Upgrading from previous versions
+### Upgrading from previous versions
 
 If you are upgrading from a previous version of the driver, be sure to have a look at
 the [upgrade guide](../upgrade_guide/index).
