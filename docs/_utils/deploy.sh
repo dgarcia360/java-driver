@@ -3,8 +3,9 @@
 # Clone repo
 git clone "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" --branch gh-pages --single-branch gh-pages
 cp -r docs/_build/dirhtml/* gh-pages
-# Redirect index to latest version
+# Redirections
 ./docs/_utils/redirect.sh > gh-pages/index.html
+find  ./docs/_build/dirhtml/* -name "api.html" -exec cp ./docs/_utils/api.html {} \;
 # Deploy
 cd gh-pages
 touch .nojekyll

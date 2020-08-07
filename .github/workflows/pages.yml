@@ -30,7 +30,6 @@ jobs:
     - name: Build Doxygen docs
       run: |
         ./docs/_utils/doxygen.sh
-        find  ./docs/_build/dirhtml/* -name "api.html" -exec cp ./docs/_utils/api.html {} \;
     - name: Deploy
       run : ./docs/_utils/deploy.sh
       env:
