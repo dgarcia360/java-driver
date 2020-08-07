@@ -90,7 +90,7 @@ limitations under the License.
 .. toctree::
    :hidden:
    
-   API Documentation <api/classes.html#http://>
+   API Documentation </api/classes.html#http://>
    installation/index  
    manual/index
    upgrade_guide/index
