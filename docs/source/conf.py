@@ -79,6 +79,7 @@ def setup(app):
         'enable_auto_toc_tree': False,
     }, True)
     app.add_transform(AutoStructify)
+    app.connect('build-finished', create_redirects)
 
 # The master toctree document.
 master_doc = 'index'
