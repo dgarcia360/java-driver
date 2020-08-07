@@ -28,7 +28,9 @@ jobs:
         cd docs
         make multiversion
     - name: Build Doxygen docs
-      run: ./docs/_utils/doxygen.sh
+      run: |
+        ./docs/_utils/doxygen.sh
+        find  ./docs/_build/* -name "api.html" -delete
     - name: Deploy
       run : ./docs/_utils/deploy.sh
       env:
