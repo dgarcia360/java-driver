@@ -72,3 +72,5 @@ the [upgrade guide](../upgrade_guide/index).
 
 If you are upgrading to _DataStax Enterprise_, use the [DataStax Enterprise Java driver][dse-driver] for more
 features and better compatibility.
+
+[dse-driver]: https://docs.datastax.com/en/developer/java-driver-dse/
